@@ -1,15 +1,18 @@
-#include "checksum.h"
 #include <pcap/pcap.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/types.h>
 
 #include <net/ethernet.h>
 #include <net/if_arp.h>
+#include <netinet/eth.h>
 #include <netinet/ip.h>
 #include <netinet/ip_icmp.h>
 #include <netinet/tcp.h>
 #include <netinet/udp.h>
+
+#include "checksum.h"
 
 #define IP_ADDR_SIZE 4
 #define MAC_ADDR_SIZE 6
